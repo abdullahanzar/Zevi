@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400&display=swap');
 html, body, #root, .App {
     margin: 0;
     height: 100%;
@@ -7,5 +8,6 @@ html, body, #root, .App {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: DM Sans;
 }
 

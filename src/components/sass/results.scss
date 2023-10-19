@@ -1,0 +1,49 @@
+.searchResults {
+  position: relative;
+  width: 100%;
+  top: 20%;
+
+  p {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  .divisions {
+    display: flex;
+    flex-direction: row;
+    .filters {
+        width: 15%;
+        .filter {
+            display: flex;
+            flex-direction: column;
+            p {
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+            img {
+                width: 50%;
+                height: 5%;
+                object-fit: contain;
+            }
+            .checkbox {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 2rem;
+                input {
+                    margin-right: 1rem;
+                }
+            }
+            .break {
+                width: 100%;
+                height: 2%;
+                border: 1px solid grey;
+                margin-top: 1rem;
+            }
+        }
+    }
+  }
+}
+
