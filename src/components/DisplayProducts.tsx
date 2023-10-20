@@ -65,8 +65,7 @@ const ProductCards : React.FC<ProductCardsProps> = ({product}) => {
 const getFilteredProducts = (products: Product[], filterKey: string, brand: string[], rating: string[], price:number[]) : Product[] => {
     let filtered: Product[] =  products.filter((product: Product) => {
         const nameMatches = product.name.toLowerCase().includes(filterKey.toLowerCase());
-        const categoryMatches = product.category.toLowerCase().includes(filterKey.toLowerCase());
-        return nameMatches || categoryMatches;
+        return nameMatches;
     })
     if(brand.length!==0) {
         filtered = filtered.filter((product)=>{
