@@ -12,4 +12,4 @@ Zive is a simple web application that allows users to browse through various pro
 
 ## Demo
 
-You can see a live demo of the Zive application here: (#https://main--effervescent-fairy-4c5c65.netlify.app/).
+You can see a live demo of the Zive application here: #https://main--effervescent-fairy-4c5c65.netlify.app/
