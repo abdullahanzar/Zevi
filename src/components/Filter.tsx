@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Faker from '@faker-js/faker';
 import './sass/Filter.scss'
 
 interface Product {
@@ -21,6 +20,7 @@ interface FilterProps {
 }
 const Filter : React.FC<FilterProps> = ({filterKey, products, setSearched}) => {
     const [filteredProducts, setFilteredProducts] = useState<Product[]>(getFilteredProducts(products, filterKey));
+    /* eslint-disable react-hooks/exhaustive-deps */
     useEffect(()=>{
         setFilteredProducts(getFilteredProducts(products, filterKey))
     }, [filterKey])
