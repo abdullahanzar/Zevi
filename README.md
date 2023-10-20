@@ -1,4 +1,4 @@
-# Zive - Product Listing and Wishlist Application
+# Zive - Product Listing Application
 
 Zive is a simple web application that allows users to browse through various products and offers the ability to search for products, apply filters, and see a rating of different products.
 
