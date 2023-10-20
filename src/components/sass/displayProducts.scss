@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "entypo";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-90/entypo.woff")
+    format("woff");
+}
+
 .products {
   width: 85%;
   position: relative;
@@ -46,21 +52,43 @@
       height: 13%;
       font-size: 1.2rem;
     }
+    .entypo-heart:before {
+      content: "\2665";
+    }
+    [class*="entypo-"]:before {
+      font-family: 'entypo', sans-serif;
+      color: grey;
+      position: absolute;
+      right: 7%;
+      top: 5%;
+      font-size: 1.5rem;
+    }
+    .entypo-heart-selected:before {
+      content: "\2665";
+    }
+    [class*="entypo-heart-selected"]:before {
+      font-family: 'entypo', sans-serif;
+      color: red;
+      position: absolute;
+      right: 7%;
+      top: 5%;
+      font-size: 1.5rem;
+    }
     .crossedOut {
       text-decoration: line-through;
       color: rgba(72, 72, 72, 0.837);
     }
     .mainprice {
-        text-decoration: none;
-        font-size: 1.2rem;
-        color: #8561df;
-        margin-left: 0.2rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #8561df;
+      margin-left: 0.2rem;
     }
     .product-price {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 2rem;
     }
   }
 }

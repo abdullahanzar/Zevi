@@ -30,8 +30,8 @@ const Results: React.FC<ResultsProps> = ({ filterKey, products }) => {
     const [price, setPrice] = useState<number[]>([]);
     const [rating, setRating] = useState<string[]>([]);
     useEffect(()=>{
-        console.log(price)
-    }, [price])
+        console.log(products)
+    }, [products])
   return (
     <div className="searchResults">
       <p>Search Results</p>

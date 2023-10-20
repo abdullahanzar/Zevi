@@ -26,7 +26,6 @@ const DisplayProducts : React.FC<DisplayProductsProps> = ({products, filterKey, 
     const [filteredProducts, setFilteredProducts] = useState<Product[]>(getFilteredProducts(products, filterKey, brand, rating, price));
     useEffect(()=>{
         setFilteredProducts(getFilteredProducts(products, filterKey, brand, rating, price))
-        console.log(filteredProducts)
     }, [filterKey, brand, rating, price])
   return (
     <div className="products">
@@ -45,11 +44,13 @@ interface ProductCardsProps {
 
 const ProductCards : React.FC<ProductCardsProps> = ({product}) => {
     const [viewProduct, setViewProduct] = useState<boolean>(false);
+    const [wishlisted, setWishListed] = useState<boolean>(false);
     return (
         <div className="Product-Card" onMouseEnter={()=>setViewProduct(true)} onMouseLeave={()=>setViewProduct(false)}>
             <div className='card-image'>
             <img src={product.imageURL} alt="" />
             {viewProduct && <div className='hoverView'>View Product</div>}
+            <div className={wishlisted ? "entypo-heart-selected" : "entypo-heart"} onClick={()=> !wishlisted ? setWishListed(true) : setWishListed(false)}></div>
             </div>
             <p>{product.name}</p>
             <div className='product-price'>

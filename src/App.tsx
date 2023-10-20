@@ -37,7 +37,7 @@ const generateFakeProducts = (count: number) : Product[] => {
       price: Number.parseInt(faker.commerce.price()),
       rating: Math.random()*10,
       wishlist: false,
-      brand: faker.company.buzzNoun(),
+      brand: faker.commerce.productName().includes("T") ? "H&M": "Mango",
     }
     fakeProducts.push(fakeProduct);
   }

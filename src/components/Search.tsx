@@ -38,7 +38,7 @@ const Search : React.FC<SearchProps> = ({products}) => {
         timeout={500}
         classNames={"search-bar"}
         >
-        <input type="text" className={!searched ? 'search-bar-original' : 'search-bar-searched'} placeholder='Search' value={filterKey} onChange={(e)=>setFilterKey(e.target.value)} onClick={()=>setSearchBoxClicked(true)} onKeyDown={(e)=>{e.key=='Enter' ? setSearched(true) : setSearched(false)}}/>
+        <input type="text" className={!searched ? 'search-bar-original' : 'search-bar-searched'} placeholder='Search' value={filterKey} onChange={(e)=>setFilterKey(e.target.value)} onClick={()=>setSearchBoxClicked(true)} onKeyDown={(e)=>{if(e.key==='Enter') setSearched(true) }}/>
         </CSSTransition>
         }
         <img src={searchIcon} className={!searched ? 'search-img-original' : 'search-img-searched'}
