@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Search from './components/Search';
 import { faker } from '@faker-js/faker';
 
@@ -15,6 +15,7 @@ interface Product {
 }
 
 function App() {
+  // eslint-disable-next-line
   const [products, setProducts] = useState<Product[]>(generateFakeProducts(100));
   return (
     <div className="App">

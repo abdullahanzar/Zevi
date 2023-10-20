@@ -24,6 +24,7 @@ interface DisplayProductsProps {
 
 const DisplayProducts : React.FC<DisplayProductsProps> = ({products, filterKey, brand, rating, price}) => {
     const [filteredProducts, setFilteredProducts] = useState<Product[]>(getFilteredProducts(products, filterKey, brand, rating, price));
+    /* eslint-disable react-hooks/exhaustive-deps */
     useEffect(()=>{
         setFilteredProducts(getFilteredProducts(products, filterKey, brand, rating, price))
     }, [filterKey, brand, rating, price])

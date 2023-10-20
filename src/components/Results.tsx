@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./sass/results.scss";
-import oneStar from "./assets/one-star.jpg";
-import twoStar from "./assets/two-stars-2.jpg";
-import threeStar from "./assets/three-stars.jpg";
-import fourStar from "./assets/four-stars.jpg";
-import fiveStar from "./assets/five-stars.jpg";
 import Star from "./Star";
 import DisplayProducts from "./DisplayProducts";
 
