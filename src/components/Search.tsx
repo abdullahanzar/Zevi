@@ -38,7 +38,7 @@ const Search : React.FC<SearchProps> = ({products}) => {
         timeout={500}
         classNames={"search-bar"}
         >
-        <input type="text" className={!searched ? 'search-bar-original' : 'search-bar-searched'} placeholder='Search' value={filterKey} onChange={(e)=>setFilterKey(e.target.value)} onClick={()=>setSearchBoxClicked(true)}/>
+        <input type="text" className={!searched ? 'search-bar-original' : 'search-bar-searched'} placeholder='Search' value={filterKey} onChange={(e)=>setFilterKey(e.target.value)} onClick={()=>setSearchBoxClicked(true)} onKeyDown={(e)=>{e.key=='Enter' ? setSearched(true) : setSearched(false)}}/>
         </CSSTransition>
         }
         <img src={searchIcon} className={!searched ? 'search-img-original' : 'search-img-searched'}
@@ -51,7 +51,7 @@ const Search : React.FC<SearchProps> = ({products}) => {
         classNames={"fade"}
         unmountOnExit
         >
-        <Filter filterKey={filterKey} products={products}/>
+        <Filter filterKey={filterKey} products={products} setSearched={setSearched}/>
         </CSSTransition>
         }   
         {

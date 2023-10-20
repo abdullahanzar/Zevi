@@ -16,15 +16,16 @@ interface Product {
 
 interface FilterProps {
     filterKey: string, 
-    products: Product[]
+    products: Product[],
+    setSearched: (searchValue: boolean)=>void;
 }
-const Filter : React.FC<FilterProps> = ({filterKey, products}) => {
+const Filter : React.FC<FilterProps> = ({filterKey, products, setSearched}) => {
     const [filteredProducts, setFilteredProducts] = useState<Product[]>(getFilteredProducts(products, filterKey));
     useEffect(()=>{
         setFilteredProducts(getFilteredProducts(products, filterKey))
     }, [filterKey])
     return (
-        <div className="trends">
+        <div className="trends" onClick={()=>setSearched(true)}>
             <p>Latest Trends</p>
             <div className="cards">
            {filteredProducts.slice(0, 5).map((product: Product, key: number)=>(
