@@ -27,7 +27,7 @@ const generateFakeProducts = (count: number) : Product[] => {
   const fakeProducts: Product[] = [];
   for(let i=0; i<count; i++) {
     const fakeProduct: Product = {
-      id: count,
+      id: i,
       name: faker.commerce.productName(),
       category: faker.commerce.product(),
       description: faker.commerce.productDescription(),

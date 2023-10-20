@@ -6,6 +6,7 @@ import threeStar from "./assets/three-stars.jpg";
 import fourStar from "./assets/four-stars.jpg";
 import fiveStar from "./assets/five-stars.jpg";
 import Star from "./Star";
+import DisplayProducts from "./DisplayProducts";
 
 interface Product {
     id: number,
@@ -26,11 +27,11 @@ interface ResultsProps {
 
 const Results: React.FC<ResultsProps> = ({ filterKey, products }) => {
     const [brand, setBrand] = useState<string[]>([]);
-    const [price, setPrice] = useState<string[]>([]);
+    const [price, setPrice] = useState<number[]>([]);
     const [rating, setRating] = useState<string[]>([]);
     useEffect(()=>{
-        console.log(rating)
-    }, [rating])
+        console.log(price)
+    }, [price])
   return (
     <div className="searchResults">
       <p>Search Results</p>
@@ -51,12 +52,12 @@ const Results: React.FC<ResultsProps> = ({ filterKey, products }) => {
           <div className="filter">
             <p>PRICE RANGE</p>
             <div className="checkbox">
-              <input type="checkbox" name="<500" id="" onChange={()=>{!price.includes('<500')?setPrice([...price, '<500']) : setPrice([])}}/>
+              <input type="checkbox" name="<500" id="" onChange={()=>{!price.includes(500)?setPrice([...price, 500]) : setPrice([])}}/>
               <label htmlFor="<500">Under 500</label>
             </div>
             <div className="checkbox">
-              <input type="checkbox" name="1000-3000" id="" onChange={()=>{!price.includes('500-1000')?setPrice([...price, '500-1000']) : setPrice([])}}/>
-              <label htmlFor="1000-3000">1000 To 3000</label>
+              <input type="checkbox" name="<1000" id="" onChange={()=>{!price.includes(1000)?setPrice([...price, 1000]) : setPrice([])}}/>
+              <label htmlFor="<1000">Under 1000</label>
             </div>
             <div className="break"></div>
           </div>
@@ -87,9 +88,7 @@ const Results: React.FC<ResultsProps> = ({ filterKey, products }) => {
             <div className="break"></div>
           </div>
         </div>
-        <div className="products">
-
-        </div>
+            <DisplayProducts products={products} filterKey={filterKey} rating={rating} price={price} brand={brand}/>
       </div>
     </div>
   );
