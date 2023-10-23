@@ -1,6 +1,6 @@
-# Zive - Product Listing Application
+# Zevi - Product Listing Application
 
-Zive is a simple web application that allows users to browse through various products and offers the ability to search for products, apply filters, and see a rating of different products.
+Zevi is a simple web application that allows users to browse through various products and offers the ability to search for products, apply filters, and see a rating of different products.
 
 ## Features
 
@@ -12,7 +12,7 @@ Zive is a simple web application that allows users to browse through various pro
 
 ## Demo
 
-You can see a live demo of the Zive application here: #https://main--effervescent-fairy-4c5c65.netlify.app/
+You can see a live demo of the Zevi application here: #https://main--effervescent-fairy-4c5c65.netlify.app/
 
 ## Issues
 
